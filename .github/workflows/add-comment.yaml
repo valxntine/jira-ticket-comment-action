@@ -1,0 +1,20 @@
+name: Add JIRA ticket comment
+
+on: 
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+
+  annotate-pr:
+    runs-on: ubuntu-latest
+    name: Annotates pull request with JIRA ticket link
+    steps:
+      - name: Annotate PR
+        uses: valxntine/jira-ticket-comment-action@main
+        with:
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.event.repository.name }}
+          pr_number: ${{ github.event.number }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          jira_org: valxntine
