@@ -9842,9 +9842,7 @@ const main = async () => {
       owner,
       repo,
       issue_number: pr_number,
-      body: `
-        This PR contains changes referring to ticket [${jiraIssue}](https://${orgName}.atlassian.net/browse/${jiraIssue}) 
-      `
+      body: `This PR contains changes referring to ticket [${jiraIssue}](https://${orgName}.atlassian.net/browse/${jiraIssue})`
     });
 
     } catch (error) {
