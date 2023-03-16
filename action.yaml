@@ -1,0 +1,21 @@
+name: 'Jira Ticket Comment Metadata Action'
+description: 'Adds a comment including a link to the JIRA issue referenced in a PRs title'
+inputs:
+  owner:
+    description: 'The owner of the repository'
+    required: true
+  repo:
+    description: 'The name of the repository'
+    required: true
+  pr_number:
+    description: 'The number of the pull request'
+    required: true
+  token:
+    description: 'The token to use to access the GitHub API'
+    required: true
+  jira_org:
+    description: 'The name of your JIRA org, found in the URL (https://<YOUR_ORG>.atlassian.net)'
+    required: true
+runs:
+  using: 'node18'
+  main: 'index.js'
