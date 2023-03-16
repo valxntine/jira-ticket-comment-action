@@ -20,5 +20,5 @@ inputs:
     description: 'Comma delimited list of possible JIRA issue prefixes (e.g "ABC,DEF,GHIJ")'
     required: true
 runs:
-  using: 'node18'
+  using: 'node16'
   main: 'dist/index.js'
