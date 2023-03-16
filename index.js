@@ -17,7 +17,7 @@ const main = async () => {
         ticketPrefixes.push(p)
     }
 
-    const prTitle = github.context.payload.pull_request.prTitle
+    const prTitle = github.context.payload.pull_request.title
 
     const issueNumbers = []
 
