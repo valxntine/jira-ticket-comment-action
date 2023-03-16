@@ -16,6 +16,9 @@ inputs:
   jira_org:
     description: 'The name of your JIRA org, found in the URL (https://<YOUR_ORG>.atlassian.net)'
     required: true
+  ticket_prefixes:
+    description: 'Comma delimited list of possible JIRA issue prefixes (e.g "ABC,DEF,GHIJ")'
+    required: true
 runs:
   using: 'node18'
   main: 'dist/index.js'

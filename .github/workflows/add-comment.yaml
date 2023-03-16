@@ -17,4 +17,5 @@ jobs:
           repo: ${{ github.event.repository.name }}
           pr_number: ${{ github.event.number }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          jira_org: valxntine
+          jira_org: "valxntine"
+          ticket_prefixes: "JUP,DMT,VAL"
